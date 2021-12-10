@@ -1,0 +1,152 @@
+.bgContainer {
+  background-image: linear-gradient(to bottom, #9ba9eb, #c3caea);
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto';
+}
+.logoPasswdImg {
+  width: 15%;
+  margin: 10px;
+}
+.formImage {
+  width: 20%;
+}
+.inputFormContainer {
+  background-color: #5763a5;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.contentContainers {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formHead {
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.inputImgs {
+  display: flex;
+  margin: 10px;
+}
+.inputLogos {
+  width: 100%;
+}
+.imgContainers {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  max-width: 25px;
+  height: 32px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.inputBox {
+  width: 250px;
+  height: 32px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-width: 0px;
+  border-left: 1px solid #c3caea;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.inputFormContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+}
+.button {
+  background-color: #0b69ff;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.formImage {
+  width: 40%;
+}
+.passwordHandling {
+  background-color: #5763a5;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 50%;
+}
+.footerHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.passwdCount {
+  color: white;
+  font-weight: bold;
+}
+.countSpan {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+.searchImg {
+  width: 30%;
+}
+.searchContainer {
+  display: flex;
+  max-height: 20%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.searchBox {
+  max-height: 50%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-width: 0px;
+  padding: 3.5px;
+  border-left: 1px solid #c3caea;
+}
+.searchImg {
+  width: 10%;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.checkBox {
+  color: white;
+  font-size: 15px;
+}
+.checkBoxContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.noPasswd {
+  color: white;
+  font-weight: bold;
+}
+.noPasswordImg {
+  width: 20%;
+}
+.nullImgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
