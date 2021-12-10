@@ -11,6 +11,7 @@ const InputSection = props => {
   ) : (
     <img
       src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+      className="starImage"
       alt="stars"
     />
   )
@@ -27,8 +28,13 @@ const InputSection = props => {
         <p className="userName">{userNameInput}</p>
         {showHidePasswd}
       </div>
-      <div className="buttonContainer">
-        <button className="button" onClick={deleteList} type="button">
+      <div className="buttonContainer1">
+        <button
+          className="buttonDelete"
+          testid="delete"
+          onClick={deleteList}
+          type="button"
+        >
           <img
             src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
             className="deleteImg"

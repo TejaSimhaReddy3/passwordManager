@@ -28,21 +28,24 @@ class PasswordManager extends Component {
 
   onSubmitForm = event => {
     event.preventDefault()
-    const {websiteInput, userNameInput, passwordInput} = this.setState
 
-    const newItem = {
-      id: uuid(),
-      websiteInput,
-      userNameInput,
-      passwordInput,
+    const {websiteInput, userNameInput, passwordInput} = this.state
+
+    if (websiteInput !== '' && userNameInput !== '' && passwordInput !== '') {
+      const newItem = {
+        id: uuid(),
+        websiteInput,
+        userNameInput,
+        passwordInput,
+      }
+
+      this.setState(prevState => ({
+        itemsList: [...prevState.itemsList, newItem],
+        websiteInput: '',
+        userNameInput: '',
+        passwordInput: '',
+      }))
     }
-
-    this.setState(prevState => ({
-      itemsList: [...prevState.itemsList, newItem],
-      websiteInput: '',
-      userNameInput: '',
-      passwordInput: '',
-    }))
   }
 
   onSearchList = event => {
@@ -77,10 +80,9 @@ class PasswordManager extends Component {
   updatedLists = () => {
     const {itemsList, searchInput} = this.state
 
-    const filteredList = itemsList.filter(eachList => {
-      eachList.webInput.toLowerCase().includes(searchInput.toLowerCase())
-      return eachList
-    })
+    const filteredList = itemsList.filter(eachList =>
+      eachList.websiteInput.toLowerCase().includes(searchInput.toLowerCase()),
+    )
 
     return filteredList
   }
@@ -170,9 +172,10 @@ class PasswordManager extends Component {
           </div>
           <div className="passwordHandling">
             <div className="footerHeader">
-              <p className="passwdCount">
-                Your Passwords <span className="countSpan">{userCount}</span>
-              </p>
+              <div className="headingContainer">
+                <h1 className="passwdCount">Your Passwords </h1>{' '}
+                <p className="countSpan">{userCount}</p>
+              </div>
               <div className="searchContainer">
                 <img
                   src="https://assets.ccbp.in/frontend/react-js/password-manager-search-img.png"
@@ -180,7 +183,7 @@ class PasswordManager extends Component {
                   className="searchImg"
                 />
                 <input
-                  type="text"
+                  type="search"
                   className="searchBox"
                   onChange={this.onSearchList}
                   placeholder="Search"
